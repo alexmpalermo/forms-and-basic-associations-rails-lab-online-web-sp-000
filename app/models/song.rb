@@ -11,6 +11,8 @@ class Song < ActiveRecord::Base
       self.genre ? self.genre.name : nil
    end
    
+   
+   
    def notes=(ids)
      ids.each do |id|
        note = Note.find(id)
