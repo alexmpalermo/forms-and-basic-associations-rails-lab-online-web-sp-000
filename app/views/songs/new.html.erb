@@ -8,7 +8,7 @@
   <%= f.text_field :artist_name %>
   <br>
   <%= f.label :genre_name %>
-  <%= f.checkbox :genre_name %>
+  <%= f.collection_select :genre_name, Genre.all, :name, :name %>
   <br>
   <%= f.label "Notes" %>
   <%= f.text_area :notes_1 %>
