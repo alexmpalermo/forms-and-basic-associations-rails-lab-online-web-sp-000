@@ -14,12 +14,7 @@ class SongsController < ApplicationController
   def create
     @genre = Genre.find_by(name: params[:song][:genre_name])
     @artist = Artist.find_or_create_by(name: params[:song][:artist_name])
-    @song = Song.new({
-      title: params[:song][:title], 
-      genre_name: params[:song][:genre_name], 
-      artist_name: params[:song][:artist_name]
-      
-    })
+    @song = Song.new(song_params)
     
 
     if @song.save
