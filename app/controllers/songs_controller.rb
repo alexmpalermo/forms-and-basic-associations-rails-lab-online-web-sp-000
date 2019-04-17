@@ -17,7 +17,7 @@ class SongsController < ApplicationController
     @song = Song.new({
       title: params[:song][:title], 
       genre_name: params[:song][:genre_name], 
-      artist_name: @artist
+      artist_name: params[:song][:artist_name]
       
     })
     @notes = Note.create(content: params[:song][:notes_1])
