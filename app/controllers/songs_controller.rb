@@ -13,6 +13,7 @@ class SongsController < ApplicationController
 
   def create
     @genre = Genre.find_by(name: params[:song][:genre_name])
+    
     @song = Song.new(title: params[:song][:title], genre: @genre)
 
     if @song.save
