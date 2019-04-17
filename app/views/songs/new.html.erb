@@ -1,11 +1,11 @@
 <h1>Create a Song</h1>
 
 <%= form_for @song  do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
+  <%= f.label :song_title %>
+  <%= f.text_field :song_title %>
   <br>
-  <%= f.label :genre %>
-  <%= f.checkbox :genre %>
+  <%= f.label :song_genre %>
+  <%= f.checkbox :song_genre %>
   <br>
   <%= f.label "Notes" %>
   <%= f.text_area :song_notes_1 %>
