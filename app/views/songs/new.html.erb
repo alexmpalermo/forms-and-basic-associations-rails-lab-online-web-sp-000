@@ -15,7 +15,7 @@
   <%= f.collection_select :genre_name, Genre.all, :name, :name %>
   <br>
   <%= f.label "Notes" %>
-  <%= f.text_area :notes_1 %>
+  <input name="song[notes][]">
   <%= f.text_area :notes_2 %>
   <%= f.submit %>
 <% end %>
