@@ -20,7 +20,7 @@ class SongsController < ApplicationController
       artist_name: params[:song][:artist_name]
       
     })
-    @notes = Note.create(content: params[:song][:notes_1])
+    
 
     if @song.save
       redirect_to @song
